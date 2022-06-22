@@ -1,4 +1,6 @@
 const express = require("express");
 const app = express();
+const time = Date.now() + 28800000;
+const today = new Date(time).toUTCString();
 
-app.listen(3000);
+console.log(`${today}+8`);
