@@ -13,6 +13,8 @@ const startServer = async () => {
     // });
     // await data.save();
     console.log("success");
+    const x = await table.findById("62b349cb63c502095e68b68a", "author text");
+    console.log(x);
   } catch (err) {
     console.log(err);
   }
