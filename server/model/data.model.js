@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
-
+const hktNow = require("../controller/date.controller.js");
+const startServer = require("../mongodb.js");
 const dataModel = new mongoose.Schema({
   author: {
     type: String,
@@ -13,20 +14,22 @@ const dataModel = new mongoose.Schema({
 
   timeSubmitted: {
     type: Date,
-    default: Date.now(),
+    default: hktNow(),
   },
 });
 
-const table = mongoose.model("textSchema", dataModel);
+const textSchema = mongoose.model("textSchema", dataModel);
 
-const saveData = async () => {
-  const data = new table({
-    author: "Peter",
-    text: "First try",
-  });
+// const saveData = async () => {
+//   const data = new textSchema({
+//     author: "Peter",
+//     text: "Second try",
+//   });
 
-  await data.save();
-};
+//   await data.save();
+//   console.log(data);
+// };
+// saveData();
 
-module.exports = { table, saveData };
+module.exports = textSchema;
 // module.exports = mongoose.model("textSchema", dataModel);

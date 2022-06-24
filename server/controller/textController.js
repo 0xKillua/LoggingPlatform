@@ -1,13 +1,27 @@
 const express = require("express");
-const router = express.Router();
+const textSchema = require("../model/data.model.js");
 
-router.get("/about", (res, req) => {
-  res.send(`This is about page`);
-});
+const textController = {
+  logData: async (req, res) => {
+    const { author, text } = req.body;
+    console.log(req.body);
+    console.log(author);
+    try {
+      const data = textSchema.create({ author, text });
+      res.status(200).json(data);
+    } catch (err) {
+      res.status(400).json({ err: err.message });
+    }
+  },
 
-
-router.post('/submit', (res,req)=>{
-    if(req.)
-})
-
-module.exports = {router};
+  readAuthor: async (res, req) => {
+    try {
+      const data = await textSchema.findOne(
+        { author: res.params.author },
+        "text"
+      );
+      data != null || undefined ? req.send(data) : req.send("no such author"); //serve corresponding json file
+    } catch (err) {}
+  },
+};
+module.exports = { textController };
