@@ -1,6 +1,5 @@
-const express = require("express");
 const textSchema = require("../model/data.model.js");
-
+const { logger } = require("../provider/logging.provider");
 const textController = {
   logData: async (req, res) => {
     const { author, text } = req.body;
@@ -16,12 +15,22 @@ const textController = {
 
   readAuthor: async (res, req) => {
     try {
-      const data = await textSchema.findOne(
-        { author: res.params.author },
-        "text"
-      );
-      data != null || undefined ? req.send(data) : req.send("no such author"); //serve corresponding json file
-    } catch (err) {}
+      const data = await textSchema.findOne({ author: res.params.author });
+      if (data != null || undefined) {
+        req.send(
+          `
+        <h1>Your text is ${data.text}</h>
+        <h2>Your id is ${data._id}
+        <h3>Time submitted ${data.timeSubmitted}
+        `
+        );
+        logger.info(`Requested by ${res.params.author} :  ${data}`);
+      } else {
+        req.send("no such author");
+      } //serve corresponding json file
+    } catch (err) {
+      console.log(err);
+    }
   },
 };
 module.exports = { textController };

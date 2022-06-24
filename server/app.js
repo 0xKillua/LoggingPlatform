@@ -10,4 +10,4 @@ app.get("/", (res, req) => {
 });
 
 app.use("/api", apiRoutes);
-app.listen(3000);
+app.listen(3001);

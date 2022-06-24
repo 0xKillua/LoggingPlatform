@@ -1,0 +1,19 @@
+2022-06-24 18:30:09:309 info: { _id: new ObjectId("62b349cb63c502095e68b68a"), text: 'First try' }
+2022-06-24 18:32:18:3218 info: Requested by Peter :  { _id: new ObjectId("62b349cb63c502095e68b68a"), text: 'First try' }
+2022-06-24 18:32:33:3233 info: Requested by Peter123 :  null
+2022-06-24 18:38:54:3854 info: Requested by Peterx :  { _id: new ObjectId("62b584ea1586eb082e8a5469"), text: 'new msg' }
+2022-06-24 18:39:31:3931 info: Requested by Peterx :  { _id: new ObjectId("62b584ea1586eb082e8a5469"), text: 'new msg' }
+2022-06-24 18:40:50:4050 info: Requested by Peterx :  {
+  _id: new ObjectId("62b584ea1586eb082e8a5469"),
+  author: 'Peterx',
+  text: 'new msg',
+  timeSubmitted: 2022-06-24T17:33:03.000Z,
+  __v: 0
+}
+2022-06-24 18:41:27:4127 info: Requested by Peterx :  {
+  _id: new ObjectId("62b584ea1586eb082e8a5469"),
+  author: 'Peterx',
+  text: 'new msg',
+  timeSubmitted: 2022-06-24T17:33:03.000Z,
+  __v: 0
+}
