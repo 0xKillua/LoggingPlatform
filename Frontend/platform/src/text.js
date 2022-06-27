@@ -5,13 +5,19 @@ const Text = () => {
   const [text, setText] = useState("");
   const [author, setAuthor] = useState("");
   const [result, setResult] = useState("Submit your first text!");
-
+  const [data, setData] = useState([]);
   const submitText = (event) => {
     setText(event.target.value);
   };
 
   const submitAuthor = (event) => {
     setAuthor(event.target.value);
+  };
+  const abc = async () => {
+    const returnData = await axios.get(
+      "http://localhost:3003/api/get-data/Peter"
+    );
+    setData(returnData.data);
   };
 
   const postData = () => {
@@ -34,6 +40,14 @@ const Text = () => {
 
   return (
     <div className="textPanel">
+      <div className="fetchData">
+        {data.map((item) => (
+          <div className="databox">
+            <h>Author: {item.author} </h>
+            <h>Data: {item.text}</h>
+          </div>
+        ))}
+      </div>
       <div className="author">
         <h>author: </h>
         <input
@@ -54,6 +68,7 @@ const Text = () => {
       </div>
       <div>
         <button onClick={postData}> submit</button>
+        <button onClick={abc}>call</button>
       </div>
       <h>{result}</h>
     </div>

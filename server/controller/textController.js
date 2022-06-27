@@ -15,15 +15,9 @@ const textController = {
 
   readAuthor: async (res, req) => {
     try {
-      const data = await textSchema.findOne({ author: res.params.author });
+      const data = await textSchema.find({ author: res.params.author });
       if (data != null || undefined) {
-        req.send(
-          `
-        <h1>Your text is ${data.text}</h>
-        <h2>Your id is ${data._id}
-        <h3>Time submitted ${data.timeSubmitted}
-        `
-        );
+        req.send(data);
         logger.info(`Requested by ${res.params.author} :  ${data}`);
       } else {
         req.send("no such author");
