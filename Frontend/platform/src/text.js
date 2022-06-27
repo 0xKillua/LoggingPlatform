@@ -59,12 +59,12 @@ const Text = () => {
       </div>
       <div className="text">
         <h>Input your text here: </h>
-        <input
+        <textarea
           type="text"
           name="mainP"
           value={text}
           onChange={submitText}
-        ></input>
+        ></textarea>
       </div>
       <div>
         <button onClick={postData}> submit</button>

@@ -2492,3 +2492,184 @@
   timeSubmitted: 2022-06-24T17:04:17.000Z,
   __v: 0
 }
+2022-06-27 18:08:12:812 info: Requested by Peter :  {
+  _id: new ObjectId("62b349cb63c502095e68b68a"),
+  author: 'Peter',
+  text: 'First try',
+  timeSubmitted: 2022-06-22T16:56:43.487Z,
+  __v: 0
+},{
+  _id: new ObjectId("62b349cb63c502095e68b68d"),
+  author: 'Peter',
+  text: 'First try',
+  timeSubmitted: 2022-06-22T16:56:43.487Z,
+  __v: 0
+},{
+  _id: new ObjectId("62b34aefa8e1b46ab9752977"),
+  author: 'Peter',
+  text: 'First try',
+  timeSubmitted: 2022-06-22T17:01:34.888Z,
+  __v: 0
+},{
+  _id: new ObjectId("62b49b0545dabcb2a6c0104e"),
+  author: 'Peter',
+  text: 'First try',
+  timeSubmitted: 2022-06-23T16:55:33.176Z,
+  __v: 0
+},{
+  _id: new ObjectId("62b49b39fa2b19250f435919"),
+  author: 'Peter',
+  text: 'First try',
+  timeSubmitted: 2022-06-23T16:56:24.916Z,
+  __v: 0
+},{
+  _id: new ObjectId("62b49b4574039565b6d3963f"),
+  author: 'Peter',
+  text: 'First try',
+  timeSubmitted: 2022-06-23T16:56:37.790Z,
+  __v: 0
+},{
+  _id: new ObjectId("62b49b7621211b64cc0a3916"),
+  author: 'Peter',
+  text: 'First try',
+  timeSubmitted: 2022-06-23T16:57:25.919Z,
+  __v: 0
+},{
+  _id: new ObjectId("62b49b7cb7515b8399d420bf"),
+  author: 'Peter',
+  text: 'First try',
+  timeSubmitted: 2022-06-23T16:57:32.417Z,
+  __v: 0
+},{
+  _id: new ObjectId("62b49b84e0768254c781220e"),
+  author: 'Peter',
+  text: 'First try',
+  timeSubmitted: 2022-06-23T16:57:40.086Z,
+  __v: 0
+},{
+  _id: new ObjectId("62b49b8f42cc53d654d7d5d9"),
+  author: 'Peter',
+  text: 'First try',
+  timeSubmitted: 2022-06-23T16:57:51.194Z,
+  __v: 0
+},{
+  _id: new ObjectId("62b49bbc45e3f9a17e875c71"),
+  author: 'Peter',
+  text: 'First try',
+  timeSubmitted: 2022-06-23T16:58:36.501Z,
+  __v: 0
+},{
+  _id: new ObjectId("62b49bf1a14c4052e9b24e7c"),
+  author: 'Peter',
+  text: 'First try',
+  timeSubmitted: 2022-06-23T16:59:29.278Z,
+  __v: 0
+},{
+  _id: new ObjectId("62b49c04790ca17ecd497762"),
+  author: 'Peter',
+  text: 'First try',
+  timeSubmitted: 2022-06-23T16:59:48.141Z,
+  __v: 0
+},{
+  _id: new ObjectId("62b49c3ee3cce70c0e4e13ea"),
+  author: 'Peter',
+  text: 'First try',
+  timeSubmitted: 2022-06-23T17:00:45.833Z,
+  __v: 0
+},{
+  _id: new ObjectId("62b49c4bccb0fa4b093f378f"),
+  author: 'Peter',
+  text: 'First try',
+  timeSubmitted: 2022-06-23T17:00:59.495Z,
+  __v: 0
+},{
+  _id: new ObjectId("62b49c70c87515c896c8fd01"),
+  author: 'Peter',
+  text: 'First try',
+  timeSubmitted: 2022-06-23T17:01:36.089Z,
+  __v: 0
+},{
+  _id: new ObjectId("62b49c7bdd78919c6e269101"),
+  author: 'Peter',
+  text: 'First try',
+  timeSubmitted: 2022-06-23T17:01:47.284Z,
+  __v: 0
+},{
+  _id: new ObjectId("62b49c834b717a527ffa080e"),
+  author: 'Peter',
+  text: 'First try',
+  timeSubmitted: 2022-06-23T17:01:55.684Z,
+  __v: 0
+},{
+  _id: new ObjectId("62b49c91a9e578d5bda385ae"),
+  author: 'Peter',
+  text: 'First try',
+  timeSubmitted: 2022-06-23T17:02:09.632Z,
+  __v: 0
+},{
+  _id: new ObjectId("62b49cb91b64d001cf5c7151"),
+  author: 'Peter',
+  text: 'First try',
+  timeSubmitted: 2022-06-23T17:02:48.839Z,
+  __v: 0
+},{
+  _id: new ObjectId("62b49cfa49c5217fa6c3f829"),
+  author: 'Peter',
+  text: 'First try',
+  timeSubmitted: 2022-06-23T17:03:54.222Z,
+  __v: 0
+},{
+  _id: new ObjectId("62b49d0bd851a4958de7a9bb"),
+  author: 'Peter',
+  text: 'First try',
+  timeSubmitted: 2022-06-23T17:04:11.752Z,
+  __v: 0
+},{
+  _id: new ObjectId("62b49d11c78e3ff0efffa5f9"),
+  author: 'Peter',
+  text: 'First try',
+  timeSubmitted: 2022-06-23T17:04:17.380Z,
+  __v: 0
+},{
+  _id: new ObjectId("62b49d166b13a953ca62e719"),
+  author: 'Peter',
+  text: 'First try',
+  timeSubmitted: 2022-06-23T17:04:22.296Z,
+  __v: 0
+},{
+  _id: new ObjectId("62b49d640bb4dff532524fbe"),
+  author: 'Peter',
+  text: 'First try',
+  timeSubmitted: 2022-06-23T17:05:40.642Z,
+  __v: 0
+},{
+  _id: new ObjectId("62b49d6ff9c7c4509bc6cd51"),
+  author: 'Peter',
+  text: 'First try',
+  timeSubmitted: 2022-06-23T17:05:51.405Z,
+  __v: 0
+},{
+  _id: new ObjectId("62b55bde2c7ec2cf91907a51"),
+  author: 'Peter',
+  text: 'Second try',
+  timeSubmitted: 2022-06-24T14:38:22.000Z,
+  __v: 0
+},{
+  _id: new ObjectId("62b561276a9fba65426d3e98"),
+  author: 'Peter',
+  text: 'Second try',
+  timeSubmitted: 2022-06-24T15:00:55.000Z,
+  __v: 0
+},{
+  _id: new ObjectId("62b57df070fe879e3a541608"),
+  author: 'Peter',
+  text: 'Second try',
+  timeSubmitted: 2022-06-24T17:03:43.000Z,
+  __v: 0
+},{
+  _id: new ObjectId("62b57e11ed5aec75ab582fd9"),
+  author: 'Peter',
+  text: 'Second try',
+  timeSubmitted: 2022-06-24T17:04:17.000Z,
+  __v: 0
+}
