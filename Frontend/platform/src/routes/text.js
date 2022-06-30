@@ -63,6 +63,8 @@ const Text = () => {
           type="text"
           name="mainP"
           value={text}
+          cols="50"
+          rows="50"
           onChange={submitText}
         ></textarea>
       </div>

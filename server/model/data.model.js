@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 const hktNow = require("../controller/date.controller.js");
-const startServer = require("../mongodb.js");
 const dataModel = new mongoose.Schema({
   author: {
     type: String,
