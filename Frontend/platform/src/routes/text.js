@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-
+import React from "react";
 const Text = () => {
   const [text, setText] = useState("");
   const [author, setAuthor] = useState("");
@@ -28,7 +28,7 @@ const Text = () => {
           author: author,
           text: text,
         })
-        .then(function (res) {
+        .then(function(res) {
           setText("");
           setAuthor("");
           setResult("Successfully submitted!");

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Textbar from "../component/textbar";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const SignIn = () => {
@@ -20,13 +21,16 @@ const SignIn = () => {
       password: userPassword,
     });
   }, [userName, userPassword]);
+
   const login = async () => {
     try {
       const res = await axios.post("http://localhost:3003/api/login", userData);
       if (res.data.result) {
         setResult(`Success! The status is ${res.data.result}`);
+        console.log(res.data.token);
+        document.cookie = `token = ${res.data.token}`;
         setUserData({});
-        routeChange();
+        setTimeout(routeChange(), 3000);
       } else {
         setResult("wrong username or pw");
       }
@@ -53,6 +57,7 @@ const SignIn = () => {
       ></Textbar>
       <div>
         <button onClick={login}>login</button>
+        <a href="/register">Register Now!</a>
       </div>
       <div>{result && <h>{result}</h>}</div>
     </div>

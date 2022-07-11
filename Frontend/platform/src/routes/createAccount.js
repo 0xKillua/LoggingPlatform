@@ -1,7 +1,7 @@
 import Textbar from "../component/textbar";
 import axios from "axios";
 import { useEffect, useState } from "react";
-
+import React from "react";
 const CreateAccount = () => {
   const [userData, setUserData] = useState({});
   const [result, setResult] = useState("");
