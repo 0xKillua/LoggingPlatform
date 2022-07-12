@@ -4,20 +4,25 @@ import Authenticate from "./logicControll/authLogic";
 import SignIn from "./routes/signIn";
 import CreateAccount from "./routes/createAccount";
 import { jwtId } from "./logicControll/userContext";
-import React from "react";
+import React, { useState } from "react";
 import jwtDecode from "jwt-decode";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Profile from "./routes/profile";
 import Home from "./routes/home";
 function App() {
+  let data = "";
   const token = decodeURIComponent(document.cookie);
-  const arr = token.split("=");
-  const temp = arr[1];
-  const temp1 = jwtDecode(temp);
+  if (token) {
+    const arr = token.split("=");
+    const temp = arr[1];
+    const temp1 = jwtDecode(temp);
+    data = temp1.id;
+  }
+
   return (
     <BrowserRouter>
       <div className="App">
-        <jwtId.Provider value={temp1.id}>
+        <jwtId.Provider value={data}>
           <Routes>
             <Route path="/" element={<SignIn />}></Route>
             <Route path="/home" element={<Home />}></Route>

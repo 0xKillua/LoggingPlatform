@@ -41,7 +41,7 @@ const SignIn = () => {
 
   return (
     <div class=" flex flex-col absolute inset-0 justify-center items-center">
-      <div className="flex flex-col justify-center bg-slate-300 h-1/2 w-1/4 gap-y-6">
+      <div className="flex flex-col justify-center bg-slate-400 h-1/2 w-1/4 gap-y-6">
         <Textbar
           header="UserName"
           value={userName}
@@ -56,10 +56,10 @@ const SignIn = () => {
             setPassword(e.target.value);
           }}
         ></Textbar>
-        <div>
-          <button onClick={login}>login</button>
-          <a href="/register">Register Now!</a>
-        </div>
+        <button onClick={login}>login</button>
+        <a class="font-light text-rose-500/70" href="/register">
+          <u>Register Now!</u>
+        </a>
         <div>{result && <h>{result}</h>}</div>
       </div>
     </div>

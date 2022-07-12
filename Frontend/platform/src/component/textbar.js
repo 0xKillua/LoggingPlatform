@@ -1,10 +1,12 @@
 import React from "react";
 const Textbar = ({ header, value, setData }) => {
   return (
-    <div className="flex justify-center">
-      <h className="fixed left-2">{header}</h>
+    <div className="flex flex-row h-8 ">
+      <h className="flex justify-center text-justify align-middle font-light basis-1/3">
+        {header}
+      </h>
       <input
-        className="fixed right-4"
+        className="basis-1/2"
         type={header}
         value={value}
         onChange={setData}
