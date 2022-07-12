@@ -1,9 +1,8 @@
 const express = require("express");
 const app = express();
 const db = require("./mongodb.js");
-const crypto = require("crypto");
-const passport = require("passport");
 const cors = require("cors");
+const passport = require("passport");
 require("./config/jwt");
 
 db(); // start server;

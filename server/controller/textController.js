@@ -33,21 +33,26 @@ const textController = {
     try {
       const data = textSchema.create({ author, text });
       res.status(200).json(req.body);
-      f;
     } catch (err) {
       res.status(400).json({ err: err.message });
     }
   },
 
-  readAuthor: async (req, res) => {
+  readProfile: async (req, res) => {
     try {
-      const data = await textSchema.find({ author: res.params.author });
-      if (data != null || undefined) {
-        res.send(data);
-        logger.info(`Requested by ${res.params.author} :  ${data}`);
-      } else {
-        res.send("no such author");
-      } //serve corresponding json file
+      userDataSchema.findOne(
+        { _id: req.params.id },
+        "-_id firstName lastName emailAddress",
+        (err, results) => {
+          if (err) {
+            return res.status(200).send({
+              status: false,
+              message: "Cannot find this user",
+            });
+          }
+          return res.status(200).send(results);
+        }
+      );
     } catch (err) {
       console.log(err);
     }
