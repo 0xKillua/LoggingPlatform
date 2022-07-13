@@ -1,4 +1,4 @@
-const textSchema = require("../model/data.model.js");
+const postSchema = require("../model/post.model.js");
 const userDataSchema = require("../model/userData.model");
 const bcrypt = require("bcrypt");
 const { logger } = require("../provider/logging.provider");
@@ -28,13 +28,21 @@ const textController = {
     }
   },
 
-  logData: async (req, res) => {
-    const { author, text } = req.body;
+  createPost: async (req, res) => {
+    const { author, topic, text } = req.body;
     try {
-      const data = textSchema.create({ author, text });
-      res.status(200).json(req.body);
+      userDataSchema.findOne({ _id: author }, (err, _) => {
+        if (err) {
+          return res
+            .status(400)
+            .send({ status: "Error", message: "Cannot find this user!" });
+        }
+      });
+      const postData = await postSchema.create({ author, topic, text });
+      logger.info(`New Post Created by id ${author}`);
+      return res.status(200).send({ status: "success", ...postData });
     } catch (err) {
-      res.status(400).json({ err: err.message });
+      return res.status(400).send({ err: err.message });
     }
   },
 

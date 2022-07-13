@@ -1,5 +1,5 @@
 import "./App.css";
-import Text from "./routes/text";
+import Post from "./routes/post";
 import Authenticate from "./logicControll/authLogic";
 import SignIn from "./routes/signIn";
 import CreateAccount from "./routes/createAccount";
@@ -31,7 +31,7 @@ function App() {
               path="/post"
               element={
                 <Authenticate>
-                  <Text />
+                  <Post />
                 </Authenticate>
               }
             ></Route>

@@ -56,7 +56,14 @@ const SignIn = () => {
             setPassword(e.target.value);
           }}
         ></Textbar>
-        <button onClick={login}>login</button>
+        <div class="flex justify-center">
+          <button
+            className="font-light bg-slate-600/70 text-gray-200 w-1/4 hover:bg-slate-600/90"
+            onClick={login}
+          >
+            login
+          </button>
+        </div>
         <a class="font-light text-rose-500/70" href="/register">
           <u>Register Now!</u>
         </a>

@@ -2,7 +2,7 @@ import React from "react";
 const Textbar = ({ header, value, setData }) => {
   return (
     <div className="flex flex-row h-8 ">
-      <h className="flex justify-center text-justify align-middle font-light basis-1/3">
+      <h className="flex justify-center items-center font-light basis-1/3">
         {header}
       </h>
       <input
