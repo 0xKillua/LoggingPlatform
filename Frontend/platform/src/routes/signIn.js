@@ -40,25 +40,30 @@ const SignIn = () => {
   };
 
   return (
-    <div class=" flex flex-col absolute inset-0 justify-center items-center">
-      <div className="flex flex-col justify-center bg-slate-400 h-1/2 w-1/4 gap-y-6">
+    <div class=" flex flex-col absolute inset-0 justify-center items-center bg-gray-300">
+      <div className="flex flex-col justify-center bg-white h-1/2 w-1/4 gap-y-6 rounded-lg">
+        <h class="font-sans text-green-500 text-lg ">
+          <u>Sign in to Account</u>
+        </h>
         <Textbar
-          header="UserName"
+          // header="UserName"
           value={userName}
+          placeholder="EmailAddress"
           setData={(e) => {
             setUserName(e.target.value);
           }}
         ></Textbar>
         <Textbar
-          header="Password"
+          // header="Password"
           value={userPassword}
+          placeholder="Password"
           setData={(e) => {
             setPassword(e.target.value);
           }}
         ></Textbar>
         <div class="flex justify-center">
           <button
-            className="font-light bg-slate-600/70 text-gray-200 w-1/4 hover:bg-slate-600/90"
+            className="font-light rounded-lg bg-slate-600/70 text-gray-200 w-1/4 hover:bg-slate-600/90"
             onClick={login}
           >
             login
