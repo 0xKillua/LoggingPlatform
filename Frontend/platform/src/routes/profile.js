@@ -11,14 +11,17 @@ const Profile = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await axios.get(
-        `http://localhost:3003/api/get-profile/${id}`,
-        {
-          headers: { Authorization: jwtToken },
-        }
-      );
-
-      setUserData(res.data);
+      try {
+        const res = await axios.get(
+          `http://localhost:3003/api/get-profile/${id}`,
+          {
+            headers: { Authorization: jwtToken },
+          }
+        );
+        setUserData(res.data);
+      } catch (err) {
+        setUserData({ status: "You are not authorized! Please sign in!" });
+      }
     };
     fetchData();
   }, [id]);

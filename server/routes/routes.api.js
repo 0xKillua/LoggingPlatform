@@ -17,6 +17,7 @@ routes.post(
   passport.authenticate("jwt", { session: false }),
   textController.createPost
 );
+routes.get("/forum", textController.fetchPost);
 routes.get("/test/:id", textController.readProfile);
 routes.post("/login", loginController.verify);
 module.exports = routes;

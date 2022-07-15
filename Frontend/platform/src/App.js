@@ -9,6 +9,7 @@ import jwtDecode from "jwt-decode";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Profile from "./routes/profile";
 import Home from "./routes/home";
+import Forum from "./routes/forum";
 function App() {
   let data = "";
   const token = decodeURIComponent(document.cookie);
@@ -35,6 +36,7 @@ function App() {
                 </Authenticate>
               }
             ></Route>
+            <Route path="/forum" element={<Forum />}></Route>
             <Route path="/profile/:id" element={<Profile />}></Route>
           </Routes>
         </jwtId.Provider>

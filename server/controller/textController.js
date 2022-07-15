@@ -29,20 +29,38 @@ const textController = {
   },
 
   createPost: async (req, res) => {
-    const { author, topic, text } = req.body;
+    let { author, topic, text } = req.body;
+
     try {
-      userDataSchema.findOne({ _id: author }, (err, _) => {
-        if (err) {
-          return res
-            .status(400)
-            .send({ status: "Error", message: "Cannot find this user!" });
+      userDataSchema.findOne(
+        { _id: author },
+        "-_id emailAddress",
+        async (err, result) => {
+          if (err) {
+            return res
+              .status(400)
+              .send({ status: "Error", message: "Cannot find this user!" });
+          }
+
+          author = result.emailAddress;
+          console.log({ author });
+          console.log(author);
+          const postData = await postSchema.create({ author, topic, text });
+          logger.info(`New Post Created by id ${author}`);
+          return res.status(200).send({ status: "success", ...postData });
         }
-      });
-      const postData = await postSchema.create({ author, topic, text });
-      logger.info(`New Post Created by id ${author}`);
-      return res.status(200).send({ status: "success", ...postData });
+      );
     } catch (err) {
       return res.status(400).send({ err: err.message });
+    }
+  },
+
+  fetchPost: async (req, res) => {
+    try {
+      const data = await postSchema.find({}, "-_id author topic text");
+      return res.status(200).send(data);
+    } catch (err) {
+      return res.status(400).send({ status: "Failed" });
     }
   },
 
