@@ -21,6 +21,8 @@ const SignIn = () => {
       emailAddress: userName,
       password: userPassword,
     });
+    console.log(userName);
+    console.log(userPassword);
   }, [userName, userPassword]);
 
   const login = async () => {

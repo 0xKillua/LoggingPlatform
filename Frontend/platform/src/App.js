@@ -1,4 +1,3 @@
-import "./App.css";
 import Post from "./routes/post";
 import Authenticate from "./logicControll/authLogic";
 import SignIn from "./routes/signIn";

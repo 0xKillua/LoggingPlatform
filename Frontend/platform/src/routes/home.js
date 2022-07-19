@@ -3,10 +3,14 @@ import Navbar from "../component/navbar";
 
 const Home = () => {
   return (
-    <div class="">
-      <Navbar />
-      <h>Welcome!</h>
-    </div>
+    <>
+      <div className="min-h-screen bg-rose-50">
+        <Navbar />
+        <div className="bg-gray-200">
+          <h className="text-black">Post</h>
+        </div>
+      </div>
+    </>
   );
 };
 
