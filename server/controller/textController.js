@@ -58,7 +58,8 @@ const textController = {
   fetchPost: async (req, res) => {
     try {
       // const data = await postSchema.find({}, "-_id author topic text");
-      const data = await postSchema.find({}, "-_id topic");
+      const data = await postSchema.find({}, "topic author");
+
       return res.status(200).send(data);
     } catch (err) {
       return res.status(400).send({ status: "Failed" });

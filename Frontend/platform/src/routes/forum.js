@@ -19,14 +19,26 @@ const Forum = () => {
     <>
       <Navbar></Navbar>
       <div id="forum">
-        <div className="flex flex-col bg-gray-200">
-          {post.map((item) =>
-            Object.values(item).map((item) => (
-              <div className="border-b-2 border-gray-300 p-4 justify-center text-center">
-                <a className=" font-light ">{item}</a>
-              </div>
-            ))
-          )}
+        <div className="flex flex-col bg-gray-200 h-screen">
+          {post.map((item) => (
+            <div
+              id={item._id}
+              className="flex flex-row border-b-2 border-gray-300 p-4  text-center "
+            >
+              <a
+                className="font-sans text-l w-5/6 self-center"
+                href={`/post/${item._id}`}
+                target="_blank"
+              >
+                <u> {item.topic}</u>
+              </a>
+              <p className="font-light text-xs pb-3">
+                {`Author: ${item.author}`}{" "}
+              </p>
+            </div>
+          ))}
+          <span className="grow "></span>
+          <p className="p-4 w-5/6 text-center font-bold py-4">The End</p>
         </div>
       </div>
     </>

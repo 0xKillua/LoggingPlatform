@@ -42,7 +42,7 @@ const SignIn = () => {
   };
 
   return (
-    <div class=" flex flex-col absolute inset-0 justify-center items-center bg-gray-300">
+    <div class=" flex flex-col absolute inset-0 justify-center items-center bg-gray-300 text-center">
       <div className="flex flex-col justify-center bg-white h-1/2 w-1/4 gap-y-6 rounded-lg">
         <h class="font-sans text-green-500 text-lg ">
           <u>Sign in to Account</u>

@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Profile from "./routes/profile";
 import Home from "./routes/home";
 import Forum from "./routes/forum";
+import ReadPost from "./routes/readPost";
 function App() {
   let data = "";
   const token = decodeURIComponent(document.cookie);
@@ -37,6 +38,7 @@ function App() {
             ></Route>
             <Route path="/forum" element={<Forum />}></Route>
             <Route path="/profile/:id" element={<Profile />}></Route>
+            <Route path="/post/:postId" element={<ReadPost />}></Route>
           </Routes>
         </jwtId.Provider>
       </div>
