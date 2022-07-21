@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const moment = require("moment");
 // const hktNow = require("../controller/date.controller.js");
 const dataModel = new mongoose.Schema({
   author: {
@@ -18,7 +19,7 @@ const dataModel = new mongoose.Schema({
 
   timeSubmitted: {
     type: Date,
-    default: Date.now(),
+    default: moment(),
   },
 });
 

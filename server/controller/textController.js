@@ -57,12 +57,25 @@ const textController = {
 
   fetchPost: async (req, res) => {
     try {
-      // const data = await postSchema.find({}, "-_id author topic text");
-      const data = await postSchema.find({}, "topic author");
+      const data = await postSchema
+        .find({}, "topic author timeSubmitted")
+        .sort({ timeSubmitted: "-1" });
 
       return res.status(200).send(data);
     } catch (err) {
       return res.status(400).send({ status: "Failed" });
+    }
+  },
+
+  getPost: async (req, res) => {
+    try {
+      const postData = await postSchema.find(
+        { _id: req.params.postId },
+        "-_id"
+      );
+      return res.status(200).send(postData);
+    } catch (err) {
+      return res.status(400).send(err.message);
     }
   },
 

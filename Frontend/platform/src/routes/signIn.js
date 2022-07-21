@@ -21,8 +21,6 @@ const SignIn = () => {
       emailAddress: userName,
       password: userPassword,
     });
-    console.log(userName);
-    console.log(userPassword);
   }, [userName, userPassword]);
 
   const login = async () => {
@@ -42,9 +40,11 @@ const SignIn = () => {
   };
 
   return (
-    <div class=" flex flex-col absolute inset-0 justify-center items-center bg-gray-300 text-center">
-      <div className="flex flex-col justify-center bg-white h-1/2 w-1/4 gap-y-6 rounded-lg">
-        <h class="font-sans text-green-500 text-lg ">
+    // <div class=" flex flex-col absolute inset-0 justify-center items-center bg-gray-300 text-center">
+    // {/* <div className="flex flex-col justify-center bg-white h-1/2 w-1/4 gap-y-6 rounded-lg"> */}
+    <div className="h-screen bg-gray-200 flex justify-center items-center text-center">
+      <div className="h-1/2 w-1/2  bg-white flex flex-col gap-y-2 rounded-lg justify-center">
+        <h class="font-sans text-lg text-green-400 my-6">
           <u>Sign in to Account</u>
         </h>
         <Textbar
@@ -65,7 +65,7 @@ const SignIn = () => {
         ></Textbar>
         <div class="flex justify-center">
           <button
-            className="font-light rounded-lg bg-slate-600/70 text-gray-200 w-1/4 hover:bg-slate-600/90"
+            className="font-light rounded-lg bg-slate-600/70 text-gray-200 w-1/5 hover:bg-slate-600/90"
             onClick={login}
           >
             login

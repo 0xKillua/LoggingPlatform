@@ -18,6 +18,6 @@ routes.post(
   textController.createPost
 );
 routes.get("/forum", textController.fetchPost);
-routes.get("/test/:id", textController.readProfile);
+routes.get("/post/:postId", textController.getPost);
 routes.post("/login", loginController.verify);
 module.exports = routes;
